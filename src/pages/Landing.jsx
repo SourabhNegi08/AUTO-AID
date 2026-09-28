@@ -80,7 +80,7 @@ function Landing() {
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
 
-          <div className="h-[420px] rounded-2xl bg-zinc-800 relative overflow-hidden">
+          <div className="h-105 rounded-2xl bg-zinc-800 relative overflow-hidden">
 
             <div className="absolute inset-0 opacity-20"
               style={{
