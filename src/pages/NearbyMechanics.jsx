@@ -61,7 +61,7 @@ function NearbyMechanics() {
 
           </div>
 
-          <div className="h-[650px] bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden lg:sticky lg:top-24">
+          <div className="h-162.5 bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden lg:sticky lg:top-24">
 
             <div
               className="absolute inset-0 opacity-20"

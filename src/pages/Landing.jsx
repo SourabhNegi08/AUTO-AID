@@ -1,6 +1,24 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, MapPin, ShieldCheck, Wrench } from "lucide-react";
 
+const features = [
+  {
+    icon: MapPin,
+    title: "Nearby Providers",
+    description: "Find mechanics and roadside service providers near your location."
+  },
+  {
+    icon: Wrench,
+    title: "Quick Assistance",
+    description: "Send an assistance request without calling multiple mechanics."
+  },
+  {
+    icon: ShieldCheck,
+    title: "Trusted Service",
+    description: "View provider information, ratings and reviews before requesting help."
+  }
+];
+
 function Landing() {
   return (
     <div className="min-h-screen bg-[#0b0d0f]">
@@ -123,65 +141,26 @@ function Landing() {
 
       </section>
 
-      {/* Features */}
+      {/* feature section */}
 
       <section className="max-w-7xl mx-auto px-6 py-20">
-
         <div className="text-center mb-12">
-
-          <p className="text-orange-500 font-medium">
-            WHY AUTOAID
-          </p>
-
-          <h2 className="text-4xl font-bold mt-2">
-            Help when you need it
-          </h2>
-
+          <p className="text-orange-500 font-medium">WHY AUTOAID</p>
+          <h2 className="text-4xl font-bold mt-2">Help when you need it</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-
-          {[
-            {
-              icon: MapPin,
-              title: "Nearby Providers",
-              text: "Find mechanics and roadside service providers near your location."
-            },
-            {
-              icon: Wrench,
-              title: "Quick Assistance",
-              text: "Send an assistance request without calling multiple mechanics."
-            },
-            {
-              icon: ShieldCheck,
-              title: "Trusted Service",
-              text: "View provider information, ratings and reviews before requesting help."
-            }
-          ].map((item) => {
-
-            const Icon = item.icon;
-
-            return (
-              <div
-                key={item.title}
-                className="bg-zinc-900 border border-zinc-800 rounded-2xl p-7"
-              >
-                <Icon className="text-orange-500" size={30} />
-
-                <h3 className="text-xl font-semibold mt-5">
-                  {item.title}
-                </h3>
-
-                <p className="text-zinc-500 mt-3">
-                  {item.text}
-                </p>
-              </div>
-            );
-
-          })}
-
+          {features.map(({ icon: Icon, title, description }) => (
+            <div
+              key={title}
+              className="bg-zinc-900 border border-zinc-800 rounded-2xl p-7"
+            >
+              <Icon className="text-orange-500" size={30} />
+              <h3 className="text-xl font-semibold mt-5">{title}</h3>
+              <p className="text-zinc-500 mt-3">{description}</p>
+            </div>
+          ))}
         </div>
-
       </section>
 
     </div>

@@ -102,7 +102,7 @@ function Dashboard() {
 
         <section className="mt-10">
 
-          <div className="h-[350px] bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden">
+          <div className="h-87 bg-zinc-900 border border-zinc-800 rounded-3xl relative overflow-hidden">
 
             <div
               className="absolute inset-0 opacity-20"
